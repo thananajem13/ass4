@@ -1,0 +1,87 @@
+header .container {
+    color: #AAA;
+    padding: 20px;
+    border-bottom: 1px solid #999;
+    font-size: 25px;
+}
+section.bookmark .container .row .bookmark{
+    background-color: #EEE; 
+    padding: 30px;
+}
+section.bookmark .container .row p{
+    color: #333;
+    margin-top: 1rem;
+}
+section.bookmark .container .row input {
+    border-radius: 5px;
+    border: 1px solid #DDD;
+    padding: 5px;
+    width: 80%;
+    margin: auto;
+    font-size: 15px;
+    max-height: 2em;
+}
+.btn-primary:hover {
+    background-color: #0a3f77;
+    border: 1px solid #0a3f77;
+}
+.btn-danger {
+    background-color: #910004;
+    color: white;
+    border: 1px solid #910004;
+}
+input:hover {
+    box-shadow: 0px 0px 12px -7px #888;
+}
+.container {
+    width: 80%;
+    margin: 15px auto;
+    padding: 0 15px;
+}
+.btn:hover {
+    box-shadow: 2px 5px 3px 0px #888;
+}
+.btn {
+    padding: 10px 15px;
+    font-size: 15px;
+    margin: 15px 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    max-width: fit-content;
+}
+.siteInfo  h2 {
+    width: 30%;
+    color: #333;
+}
+.siteInfo {
+    background-image: linear-gradient(#EEE,#FFF);
+    margin: 10px 0;
+    padding: 20px;
+} 
+#sitesInfo{
+    padding-right: 0%;
+    padding-left: 0%;
+}
+.alert-error {
+    background-color: #ffb2b2;
+    color: #6d0000 !important;
+    border: 1px solid #6d0000;
+}
+.alert {
+    padding: 5px;
+    margin-top: 10px !important ;
+    margin-bottom: 10px !important ;
+    width: 80%;
+    font-size: 18px;
+    border-radius: 5px;
+    text-align: center;
+    display: none;
+}
+footer p {
+    color: #AAA;
+}
+footer .container {
+    padding: 20px;
+    border-top: 1px solid #999;
+    font-size: 14px;
+}
