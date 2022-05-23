@@ -14,23 +14,15 @@ function submit(){
     var isValid=false;
     var singleSite = {"siteName":siteNameVal,"siteUrl":siteUrlVal};
      
-       if(validateSiteNameLength()){
-        // document.getElementById("nameError").style.setProperty("display", "block", "important") ;
-        // document.getElementById("nameError").innerHTML = "siteName Field is required";
-        // alert("siteName Field is required"); 
+       if(validateSiteNameLength()){ 
        
         document.getElementById("nameError").style.setProperty("display", "none", "important");
         if(validateSiteName() && siteNameVal.length!=0){
-            document.getElementById("nameError").style.setProperty("display", "none", "important"); 
-            // document.getElementById("nameError").style.setProperty("display", "block", "important");
-            // document.getElementById("nameError").innerHTML = "please enter correct siteName";
+            document.getElementById("nameError").style.setProperty("display", "none", "important");  
              
             if(!checkIfSiteNameExist(siteNameVal) && siteNameVal.length!=0){
                 document.getElementById("nameError").style.setProperty("display", "none", "important");
-
-                // document.getElementById("nameError").style.setProperty("display", "block", "important");
-                // document.getElementById("nameError").innerHTML = "this siteName already exist";
-                // return;
+ 
                 isValid=true;
             }
             else{
@@ -43,22 +35,16 @@ function submit(){
         else{
             document.getElementById("nameError").style.setProperty("display", "block", "important");
             document.getElementById("nameError").innerHTML = "please enter correct siteName";
-            var isValid=false;
-            // document.getElementById("nameError").style.setProperty("display", "none", "important");
+            var isValid=false; 
         }
     }
     else{
         document.getElementById("nameError").style.setProperty("display", "block", "important");
-        document.getElementById("nameError").innerHTML = "site name Field is required";
-        alert("site name Field is required")
-        var isValid=false;
-        // return; 
+        document.getElementById("nameError").innerHTML = "site name Field is required"; 
+        var isValid=false; 
     }  
     if(validateUrlSiteLength()){ 
-        document.getElementById("urlError").style.setProperty("display", "none", "important");
-        // alert("siteUrl Field is required")
-        // document.getElementById("urlError").style.setProperty("display", "block", "important");
-        // document.getElementById("urlError").innerHTML = "site url Field is required";
+        document.getElementById("urlError").style.setProperty("display", "none", "important"); 
          
         if(validateWebsite() && siteUrlVal.length!=0){
             
@@ -70,23 +56,18 @@ function submit(){
             else{
                 document.getElementById("urlError").style.setProperty("display", "block", "important");
                 document.getElementById("urlError").innerHTML = "this siteUrl already exist";
-                var isValid=false;
-                // document.getElementById("urlError").style.setProperty("display", "none", "important");
+                var isValid=false; 
                 
                 
             }
         }
-        else{
-            alert(`siteUrlVal.length: ${siteUrlVal.length}`)
+        else{  
             document.getElementById("urlError").style.setProperty("display", "block", "important");
             document.getElementById("urlError").innerHTML = "please enter correct siteUrl";
-            var isValid=false;
-            // document.getElementById("urlError").style.setProperty("display", "none", "important");
+            var isValid=false;  
         }
     }
-    else{
-        // document.getElementById("urlError").style.setProperty("display", "none", "important");
-        // alert("siteUrl Field is required")
+    else{ 
         document.getElementById("urlError").style.setProperty("display", "block", "important");
         document.getElementById("urlError").innerHTML = "site url Field is required";
         var isValid=false;
@@ -145,15 +126,14 @@ document.getElementById("urlError").style.setProperty("display","block","importa
     return urlRegex.test(siteUrl.value);
 }
 function validateSiteNameLength(){ 
-    alert(`siteName.value.length : ${siteName.value.length}`)
+     
     return siteName.value.length != 0;
 }
 function validateUrlSiteLength(){
     return siteUrl.value.length != 0;
 }
 function deleteSite(Index){
-    bookmarks.splice(Index,1);
-    alert(bookmarks)
+    bookmarks.splice(Index,1); 
     localStorage.setItem("bookmarks",JSON.stringify(bookmarks));
     displaySites();
 }
